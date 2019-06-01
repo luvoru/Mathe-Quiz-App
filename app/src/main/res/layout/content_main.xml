@@ -9,12 +9,25 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Hallo Leute!\nWenn ihr Mathe Lernen wollt seid ihr hier genau richtig!\nEinfach die erste Frage beantworten und Lose Gehts!!!"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="276dp"
+        android:layout_height="124dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="109dp" />
 
 </android.support.constraint.ConstraintLayout>
