@@ -1,5 +1,6 @@
 package luvoru.mathe_quiz_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,8 +9,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.RadioGroup;
 
 public class MainActivity extends AppCompatActivity {
+
+    RadioGroup radGrp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,17 +22,23 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+        radGrp=findViewById(R.id.radGrp);
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                if (radGrp.getCheckedRadioButtonId() == R.id.radioButton5) {
+
+                    Intent klassefuenf=new Intent(getApplicationContext(), Klasse_5.class);
+                    startActivity(klassefuenf);
+                }
             }
         });
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -48,5 +58,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
+
+
+
 }
